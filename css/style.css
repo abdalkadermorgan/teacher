@@ -1417,7 +1417,7 @@ body .transparent-header #navigation > ul ul li a { color: #aaa; }
     margin: 0;
     position: absolute;
     left: 0;
-    right: 0;
+    right: auto;
     top: 0;
     bottom: 0;
     z-index: 0
@@ -1613,11 +1613,11 @@ li.mm-vertical.mm-opened>.mm-panel {
 }
 
 .mm-next:after {
-    -webkit-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
-    right: 23px;
-    left: auto
+    -webkit-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    transform: rotate(315deg);
+    left: 23px;
+    right: auto;
 }
 
 .mm-navbar {
@@ -1766,7 +1766,7 @@ li.mm-vertical.mm-opened>.mm-panel {
 
 .mm-listview .mm-next.mm-fullsubopen+a,
 .mm-listview .mm-next.mm-fullsubopen+span {
-    padding-right: 50px;
+    padding-left: 50px;
     margin-right: 0
 }
 
@@ -1946,7 +1946,7 @@ em.mm-counter {
     display: block;
     margin-top: -10px;
     position: absolute;
-    right: 45px;
+    left: 45px;
     top: 50%
 }
 
@@ -1965,12 +1965,12 @@ em.mm-counter+a.mm-fullsubopen {
 
 em.mm-counter+a.mm-fullsubopen+a,
 em.mm-counter+a.mm-fullsubopen+span {
-    padding-right: 90px
+    padding-left: 90px
 }
 
 .mm-listview em.mm-counter+.mm-next.mm-fullsubopen+a,
 .mm-listview em.mm-counter+.mm-next.mm-fullsubopen+span {
-    padding-right: 90px;
+    padding-left: 90px;
 }
 
 .mm-vertical>.mm-counter {
@@ -2229,8 +2229,13 @@ em.mm-counter+a.mm-fullsubopen+span {
 .footer-rows-right {
 	float: left;
 	height: 100%;
+	padding-right: 7px;
+	padding-left: 7px;
 }
 
+@media (max-width: 992px){
+	#footer .news-letter {border: none;}
+}
 
 /* Language Switcher */
 .language-switcher.bootstrap-select.btn-group .dropdown-menu.inner {
@@ -2411,6 +2416,10 @@ em.mm-counter+a.mm-fullsubopen+span {
 }
 
 /* Newsletter */
+
+.news-letter {
+	border-right: 1px solid #4b79a1;
+}
 .newsletter {
 	display: flex;
 	margin-top: 20px;
